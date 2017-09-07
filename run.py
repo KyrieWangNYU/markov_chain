@@ -21,9 +21,10 @@ while len(con) < int(length):
     con.append(mc.generate_text(20))
 res = ""
 for item in con:
-    item = " ".join(item)
+    item = "".join(item)
     res += item
 
+#Put result into final file
 with open("result.txt", "r+") as f:
     f.writelines(res)
 print "Result has been stored in result.txt"
